@@ -6,7 +6,7 @@ import Countries from "./Countries";
 const Main = () => {
   const [theme] = useContext(ThemeContext);
   const [country, setCountry] = useState("");
-  const region = useRef("Africa");
+  const region = useRef("All");
   const [countries, setCountries] = useState([]);
   const loadingHook = useState(false);
   let baseCountries;

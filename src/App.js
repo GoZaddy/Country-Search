@@ -1,15 +1,15 @@
-import React from 'react';
-import Button from "./Components/Button";
-import Card from "./Components/Card";
-import ContactCard from "./Components/ContactCard";
+import React, {useState} from 'react';
+import Search from "./Components/Molecules/Search";
+import FilterByRegion from "./Components/Molecules/FilterByRegion";
+import ThemeContext from "./Context/ThemeContext";
+import Header from "./Components/Organisms/Header";
+import Main from "./Components/Organisms/Main";
 function App() {
   return (
-    <>
-      <Button>hey</Button>
-      
-      
-      <ContactCard name = "Faruq"/>
-    </>
+    <ThemeContext.Provider value = {useState("light")}>
+      <Header />
+      <Main />
+    </ThemeContext.Provider>
   );
 }
 

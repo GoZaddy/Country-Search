@@ -1,0 +1,28 @@
+.light-mode-background{
+    background-color: hsl(0, 0%, 98%);
+}
+.light-mode-input{
+    background-color: hsl(0, 0%, 52%);
+}
+.light-mode-text{
+    color: hsl(200, 15%, 8%);
+}
+.light-mode-elements{
+    background-color: hsl(0, 0%, 100%)
+}
+
+.dark-mode-background{
+    background-color: hsl(207, 26%, 17%)
+}
+.dark-mode-input{
+    background-color: hsl(0, 0%, 52%);
+}
+.dark-mode-text{
+    color: hsl(0, 0%, 100%)
+}
+.dark-mode-elements{
+    background-color: hsl(209, 23%, 22%);
+}
+
+
+

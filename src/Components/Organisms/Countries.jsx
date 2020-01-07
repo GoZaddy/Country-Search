@@ -27,7 +27,14 @@ const Countries = ({ countries, loadingHook }) => {
           region={country.region}
           capital={country.capital}
           flag = {country.flag}
-          key = {country.alpha3Code}
+          key = {country.numericCode}
+          id = {country.numericCode}
+          nativeName = {country.nativeName}
+          subRegion = {country.subregion}
+          topLevelDomain = {country.topLevelDomain}
+          currencies = {country.currencies.map(currency => currency.name)}
+          languages = {country.languages.map(language=> language.name)}
+          borders = {country.borders}
         />
       ))}
     </div>

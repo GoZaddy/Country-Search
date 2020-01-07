@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
-import Search from "./Components/Molecules/Search";
-import FilterByRegion from "./Components/Molecules/FilterByRegion";
 import ThemeContext from "./Context/ThemeContext";
 import Header from "./Components/Organisms/Header";
 import Main from "./Components/Organisms/Main";
+import CountrySelectedRoute from "./Components/Organisms/CountrySelectedRoute";
+import {Router} from "@reach/router";
 function App() {
   return (
     <ThemeContext.Provider value = {useState("light")}>
       <Header />
-      <Main />
+      <Router>
+        <Main path = "/"/>
+        <CountrySelectedRoute path = {`/details/:id`}/>
+      </Router>
     </ThemeContext.Provider>
   );
 }

@@ -615,7 +615,7 @@ main{
 }
 
 .light-mode-background{
-  background-color: hsl(0, 0%, 98%);
+  background-color: rgb(240, 240, 240);
 }
 
 .light-mode-input{
@@ -655,6 +655,7 @@ main{
 @media (min-width: 768px){
   .countries{
     grid-template-columns: 1fr 1fr;
+    grid-column-gap:3.5rem;
   }
 }
 

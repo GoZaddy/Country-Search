@@ -3,3 +3,14 @@
     grid-template-columns: 1fr;
     grid-column-gap: 1.5rem;
 }
+
+@screen md{
+    .countries{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@screen lg{
+    .countries{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

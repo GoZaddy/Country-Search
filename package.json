@@ -9,10 +9,10 @@
     "postcss-import": "^12.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-loader-spinner": "^3.1.5",
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    
     "start": "npm run build:styles && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

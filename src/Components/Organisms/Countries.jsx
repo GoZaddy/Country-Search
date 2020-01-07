@@ -1,9 +1,25 @@
 import React from "react";
 import CountryCard from "./../Molecules/CountryCard";
+import Loader from "react-loader-spinner";
 
-const Countries = ({ countries }) => {
+const Countries = ({ countries, loadingHook }) => {
+  const [isLoading] = loadingHook;
+
+  if(isLoading){
+    return(
+      <Loader
+         type="ThreeDots"
+         color="#00BFFF"
+         height={100}
+         width={100}
+         timeout={0}
+         className = "flex justify-center mt-20" 
+
+      />
+    );
+  }
   return (
-    <div className = "countries px-10 md:px-0 -mr-4">
+    <div className = "countries px-10 md:px-0">
       {countries.map(country => (
         <CountryCard
           countryName={country.name}
@@ -11,6 +27,7 @@ const Countries = ({ countries }) => {
           region={country.region}
           capital={country.capital}
           flag = {country.flag}
+          key = {country.alpha3Code}
         />
       ))}
     </div>

@@ -1,0 +1,8 @@
+.country-card{
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.country-card:hover{
+    transform: translateY(-10px) scale(1.07);
+    @apply shadow-lg;
+}

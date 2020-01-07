@@ -584,6 +584,18 @@ video {
   height: auto;
 }
 
+html{
+  height: 100%
+}
+
+body{
+  height: 100vh;
+}
+
+main{
+  height: calc(100vh - 5rem);
+}
+
 .btn{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -638,6 +650,27 @@ video {
   display:grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1.5rem;
+}
+
+@media (min-width: 768px){
+  .countries{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px){
+  .countries{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.country-card{
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.country-card:hover{
+  transform: translateY(-10px) scale(1.07);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 body{

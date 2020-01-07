@@ -5,9 +5,9 @@ const CountryCard = ({ countryName, population, region, capital, flag }) => {
   const [theme] = useContext(ThemeContext);
   return (
     <div
-      className={`rounded shadow-md ${theme}-mode-elements ${theme}-mode-text mb-16`}
+      className={`country-card cursor-pointer rounded shadow-md ${theme}-mode-elements ${theme}-mode-text mb-16`}
     >
-      <img className = "rounded-t w-full" src={flag} alt={`${countryName}'s flag`} />
+      <img className = "rounded-t w-full md:h-48" src={flag} alt={`${countryName}'s flag`} />
       <div className = "py-5 px-6">
         <strong className = "text-lg" >{countryName}</strong>
         <p className = "mb-2 mt-5">

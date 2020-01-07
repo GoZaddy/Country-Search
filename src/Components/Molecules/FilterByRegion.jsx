@@ -1,17 +1,29 @@
-import React, {useContext} from "react";
+import React, {useContext, useRef} from "react";
 import ThemeContext from "./../../Context/ThemeContext";
 
-const FilterByRegion = () => {
+const FilterByRegion = ({region, setRegion, baseCountries, setCountries}) => {
     const [theme] = useContext(ThemeContext);
+    
+    
+
+    async function regionSelectHandler(e){
+        region.current = (e.currentTarget.value);
+        baseCountries = await baseCountries;
+        console.log(region);
+        setCountries(baseCountries.filter(country => country.region === region.current));
+    }
     return(
-        <select name="" id="" className = {`rounded px-4 py-5 ${theme}-mode-elements shadow-md`} >
+        <>
+        
+        <select name="region" value = {region.current} onChange = {regionSelectHandler} id="" className = {`rounded px-4 py-5 ${theme}-mode-elements shadow-md`} >
             <option value="Africa">Africa</option>
-            <option value="America">America</option>
-            <option value="Asian">Asian</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
             <option value="Oceania">Oceania</option>
             
         </select>
+        </>
     );
 }
 

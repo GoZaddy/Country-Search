@@ -593,7 +593,11 @@ body{
 }
 
 main{
-  height: calc(100vh - 5rem);
+  min-height: calc(100vh - 5.2rem);
+}
+
+*{
+  transition: background-color 0.5s;
 }
 
 .btn{
@@ -671,6 +675,15 @@ main{
 
 .country-card:hover{
   transform: translateY(-10px) scale(1.07);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.country-border{
+  transition: transform 0.5s, box-shadow 0.2s;
+}
+
+.country-border:hover{
+  transform: translateY(-5px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 

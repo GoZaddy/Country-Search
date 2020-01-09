@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ThemeToggler from "../Molecules/ThemeToggler";
 import ThemeContext from "./../../Context/ThemeContext";
+import {Link} from "@reach/router";
 
 const Header = () => {
   const [theme] = useContext(ThemeContext);
@@ -9,7 +10,7 @@ const Header = () => {
     <header
       className={headerClassNameStyles}
     >
-      <h1 className="font-bold text-xl">Where in the world?</h1>
+      <Link to = "/" className="font-bold text-xl">Where in the world?</Link>
       <ThemeToggler />
     </header>
   );

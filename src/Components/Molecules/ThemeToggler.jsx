@@ -7,7 +7,7 @@ const ThemeToggler = () => {
   return (
     <div className = "flex cursor-pointer capitalize items-center" onClick = {() => {setTheme(theme === "light" ? "dark" : "light")}}>
       <Moon />
-      <p className = "ml-4 font-semibold">{theme} mode</p>
+      <p className = "ml-2 font-semibold">{theme} mode</p>
     </div>
   );
 };

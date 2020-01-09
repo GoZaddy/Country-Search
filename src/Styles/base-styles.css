@@ -4,7 +4,10 @@ html{
 body{
     height: 100vh;
 }
-
 main{
-    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5.5rem);
+}
+
+*{
+    transition: background-color 0.5s;
 }

@@ -1,0 +1,7 @@
+.country-border{
+    transition: transform 0.5s, box-shadow 0.2s;
+}
+.country-border:hover{
+    transform: translateY(-5px);
+    @apply shadow-lg;
+}

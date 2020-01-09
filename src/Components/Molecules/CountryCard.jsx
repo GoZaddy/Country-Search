@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "@reach/router";
 import ThemeContext from "./../../Context/ThemeContext";
+import {extractCountryInfo} from "./../../functions";
 
 const CountryCard = ({
   countryName,
@@ -17,18 +18,20 @@ const CountryCard = ({
   id
 }) => {
   const [theme] = useContext(ThemeContext);
-  const CardInfo = {
-    nativeName: nativeName,
-    population: population,
-    region: region,
-    subRegion: subRegion,
-    capital: capital,
-    topLevelDomain: topLevelDomain,
-    currencies: currencies,
-    languages: languages,
-    borders: borders,
-    flag: flag
-  };
+  const CardInfo = extractCountryInfo({
+    countryName,
+    population,
+    region,
+    capital,
+    flag,
+    nativeName,
+    subRegion,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+    id
+  });
 
   return (
     <div
@@ -59,7 +62,7 @@ const CountryCard = ({
           backgroundColor: "transparent"
         }}
         to={`/details/${id}`}
-        state={CardInfo}
+        state={{info:CardInfo}}
       ></Link>
     </div>
   );

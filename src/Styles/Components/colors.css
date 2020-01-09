@@ -1,5 +1,5 @@
 .light-mode-background{
-    background-color: rgb(240, 240, 240);
+    background-color: hsl(0, 0%, 97%);
 }
 .light-mode-input{
     background-color: hsl(0, 0%, 52%);

@@ -6,7 +6,7 @@ const Border = ({ borderName, numericCode, CardInfo }) => {
   const [theme] = useContext(ThemeContext);
   return (
     <div
-      className={`${theme}-mode-elements m-1 ${theme}-mode-text px-5 py-1 country-border shadow-md rounded relative`}
+      className={`${theme}-mode-elements m-1 ${theme}-mode-text px-5 py-2 country-border shadow-md rounded relative`}
     >
       <p>{borderName}</p>
       <Link to={`/details/${numericCode}`}

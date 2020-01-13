@@ -4,6 +4,8 @@ import Header from "./Components/Organisms/Header";
 import Main from "./Components/Organisms/Main";
 import CountrySelectedRoute from "./Components/Organisms/CountrySelectedRoute";
 import {Router} from "@reach/router";
+import {Dropdown, ListItem} from "./Components/Atoms/Dropdown";
+
 
 
 export const getCountries = async country => {
@@ -28,11 +30,15 @@ const getAllCountries = async () => {
 function App() {
   return (
     <ThemeContext.Provider value = {useState("light")}>
+      
+        
+      
       <Header />
       <Router>
         <Main allCountries = {getAllCountries()} path = "/"/>
         <CountrySelectedRoute allCountries = {getAllCountries()} path = {`/details/:id`}/>
       </Router>
+      
     </ThemeContext.Provider>
   );
 }

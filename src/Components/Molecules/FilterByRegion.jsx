@@ -1,5 +1,6 @@
 import React, {useContext, useRef} from "react";
 import ThemeContext from "./../../Context/ThemeContext";
+import Dropdown from "./../Atoms/Dropdown";
 
 const FilterByRegion = ({region, setRegion, baseCountries, setCountries}) => {
     const [theme] = useContext(ThemeContext);
@@ -21,7 +22,7 @@ const FilterByRegion = ({region, setRegion, baseCountries, setCountries}) => {
     return(
         <>
         
-        <select name="region" value = {region.current} onChange = {regionSelectHandler} id="" className = {`rounded px-4 py-5 ${theme}-mode-elements shadow-md`} >
+        <select name="region" value = {region.current} onChange = {regionSelectHandler} id="" className = {`rounded px-4 py-5 ${theme}-mode-elements shadow-md w-8/12 md:w-auto mr-auto md:mr-0`} >
             <option value="All">All</option>
             <option value="Africa">Africa</option>
             <option value="Americas">Americas</option>

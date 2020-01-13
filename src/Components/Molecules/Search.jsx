@@ -40,13 +40,15 @@ const Search = ({
     <form
       action=""
       onSubmit={searchCountry}
+      className = "w-full md:w-auto"
     >
       <label htmlFor="country" >
         
         <input
-          className={`placeholder-${blackOrWhite} ${theme}-mode-elements bg-left bg-no-repeat rounded border-1 py-4 px-10 shadow-md ${theme}-mode-elements mb-10 md:mb-0`}
+          className={`placeholder-${blackOrWhite} ${theme}-mode-elements bg-left bg-no-repeat rounded border-1 py-4 px-10 shadow-md ${theme}-mode-elements mb-10 md:mb-0 w-full`}
           type="text"
           name=""
+          id = "country"
           value={country}
           onChange={e => {
             setCountry(e.currentTarget.value);

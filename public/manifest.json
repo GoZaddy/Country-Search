@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Country Search",
+  "name": "Country Search",
   "icons": [
     {
       "src": "favicon.ico",

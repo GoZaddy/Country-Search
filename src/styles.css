@@ -593,7 +593,7 @@ body{
 }
 
 main{
-  min-height: calc(100vh - 5.2rem);
+  min-height: calc(100vh - 5.5rem);
 }
 
 *{
@@ -619,7 +619,7 @@ main{
 }
 
 .light-mode-background{
-  background-color: rgb(240, 240, 240);
+  background-color: hsl(0, 0%, 97%);
 }
 
 .light-mode-input{
